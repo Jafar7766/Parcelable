@@ -23,9 +23,8 @@ public class SecondActivity extends AppCompatActivity {
         User user;
         if(arguments!=null){
             user = arguments.getParcelable(User.class.getSimpleName());
-
-            textView.setText("Name: " + user.getName() + "\nCompany: " + user.getCompany() +
-                    "\nAge: " + user.getAge());
+            textView.setText("Name: " + user.getName() + "\nCompany: " + user.getEmail() +
+//                    "\nAge: " + user.getAge());
         }
         setContentView(textView);
 

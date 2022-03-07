@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View v) {
 
         EditText nameText = findViewById(R.id.name);
-        EditText companyText = findViewById(R.id.company);
+        EditText emailText = findViewById(R.id.email);
         EditText ageText = findViewById(R.id.age);
 
         String name = nameText.getText().toString();
-        String company = companyText.getText().toString();
-        int age = Integer.parseInt(ageText.getText().toString());
+        String email = emailText.getText().toString();
+//        int age = Integer.parseInt(ageText.getText().toString());
 
-        User user = new User(name, company, age);
+        User user = new User(name, email);
 
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(User.class.getSimpleName(), user);
